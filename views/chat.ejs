@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/style1.css">
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <script src="javascripts/script.js"></script>
+  </head>
+  <body>
+	<div class="banner">
+		<div class="container">
+			<div class="col-md-9 top-nav">
+				<span class="menu"><img src="images/menu.png" alt=""/ onclick="myFunction()"></span>
+				<ul class="nav1">
+					<li><a href="/">HOME</a></li>
+					<li id = "nd"><a href="/about" class="active">ABOUT</a></li>
+					<li id = "nd"><a href="/portfolio">PORTFOLIO</a></li>
+					<li id = "nd"><a href="/samplepage">SAMPLE PAGE</a></li>
+					<li id = "nd"><a href="/contact" >CONTACT</a></li>
+					<li><a href="/authuser" >REGISTRATION</a></li>
+					<li id = "nd"><a href="/chat" >CHAT</a></li>
+				</ul>	
+				<!-- script-for-menu -->
+				 <script>
+				   $( "span.menu" ).click(function() {
+					 $( "ul.nav1" ).slideToggle( 300, function() {
+					 // Animation complete.
+					  });
+					 });
+				</script>
+				<script>
+					function myFunction() {
+						document.getElementById("nd").style.display = 'none';
+					}
+				</script>
+				<!-- /script-for-menu -->
+			</div>
+			<div class="col-md-3 header-logo">
+				<a href="/"><img src="images/identity03.jpg" alt="logo"/></a>
+			</div>	
+			<div class="clearfix"> </div>
+		</div>	
+	</div>
+	<div class="portfolio">
+		<div class="container">
+			<div class="services">
+				<h3>ПОЛЬЗОВАТЕЛЬ <%= my_surname_user %> <%= my_name_user %> В ЧАТЕ</h3>
+			</div>	
+    <div id="main" class="container">
+      <div id="chatEntries"></div>
+      <div id="entries" class="row">
+        <input type="text" id="messageInput">
+        <div class="btn-group">
+          <button id="submit" data-loading-text="Send" class="btn">Send</button>
+          <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a id="edit" href="#modalPseudo" data-toggle="modal"><i class="icon-user"></i>Change name</a></li>
+            <li><a id="info" href="#modalInfos" data-toggle="modal"><i class="icon-info-sign"></i>Infos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="nbUsersDiv">
+        <p>There is <span id="nbUsers"></span> connected user(s).</p>
+      </div>
+    </div>
+	</div>
+	</div>
+	
+	<!--portfolio-->
+	<!--swipebox -->	
+			<link rel="stylesheet" href="stylesheets/swipebox.css">
+				<script src="javascripts/jquery.swipebox.min.js"></script> 
+				<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+				</script>
+			<!--//swipebox Ends -->
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-right">
+				<p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/" target="_blank"> W3layouts</a></p>
+			</div>
+		</div>	
+	</div>
+	<!--footer-->
+	<!--smooth-scrolling-of-move-up-->
+		<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+					<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	
+  </body>
+  
+  <div id="modalPseudo" class="modal fade" style="height:210px;">
+    <div class="modal-header">
+      <h3>Choose a name</h3>
+    </div>
+    <div class="modal-body">
+      <p>Choose a name :</p>
+      <input type="text" id="pseudoInput" value="<%= my_surname_user %> <%= my_name_user %>" disabled>
+      <div id="alertPseudo" class="alert alert-error">This name is already used ! Choose another one.</div>
+    </div>
+    <div class="modal-footer">
+      <button id="pseudoSubmit" class="btn btn-primary">Go to the chat</button>
+    </div>
+  </div>
+  
+  <div id="modalInfos" class="modal fade">
+    <div class="modal-header">
+      <h3>Infos</h3>
+    </div>
+    <div class="modal-body">
+      <p>	This application has been made with <a href="http://nodejs.org/">Node.js </a>, <a href="http://socket.io/">Socket.io</a>, <a href="http://expressjs.com/">Express </a>et <a href="http://jade-lang.com/">Jade</a>.</p>
+      <p>	She use <a href="http://twitter.github.com/bootstrap/">Bootstrap </a>from <a href="https://twitter.com/">Twitter</a>and<a hre="http://rocha.la/jQuery-slimScroll">SlimScroll</a>.</p>
+      <p>	The source has been published on Github under MIT license.</p>
+      <p>	This application has been made by <a href="http://geekuillau.me">Guillaume Besson - Geekuillaume</a>.</p>
+    </div>
+  </div>
+</html>

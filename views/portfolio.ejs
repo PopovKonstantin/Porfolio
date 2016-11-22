@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<% include layout %>
+</head>
+<body>
+	<!--header-->
+	<div class="banner">
+		<div class="container">
+			<div class="col-md-9 top-nav">
+				<span class="menu"><img src="images/menu.png" alt=""/></span>
+				<ul class="nav1">
+					<li><a href="/">HOME</a></li>
+					<li><a href="/about" class="active">ABOUT</a></li>
+					<li><a href="/portfolio">PORTFOLIO</a></li>
+					<li><a href="/samplepage">SAMPLE PAGE</a></li>
+					<li><a href="/contact" >CONTACT</a></li>
+					<li><a href="/authuser" >REGISTRATION</a></li>
+					<li><a href="/chat" >CHAT</a></li>
+				</ul>	
+				<!-- script-for-menu -->
+				 <script>
+				   $( "span.menu" ).click(function() {
+					 $( "ul.nav1" ).slideToggle( 300, function() {
+					 // Animation complete.
+					  });
+					 });
+				</script>
+				<!-- /script-for-menu -->
+			</div>
+			<div class="col-md-3 header-logo">
+				<a href="/"><img src="images/identity03.jpg" style="width:80%; height:80%;" alt="logo"/></a>
+			</div>	
+			<div class="clearfix"> </div>
+		</div>	
+	</div>
+	<!--//header-->
+	<!--portfolio-->
+	<div class="portfolio">
+		<div class="container">
+			<div class="services">
+				<h3>PORTFOLIO</h3>
+			</div>
+			<div class="portfolio-bottom">
+				<div class="portfolio-one">
+					<div class="col-md-3 port-left">
+						<a href="images/port-1.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-1.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 port-left">
+						<a href="images/port-2.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-2.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 port-left">
+						<a href="images/port-3.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-3.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 port-left">
+						<a href="images/port-4.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-4.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="portfolio-one">
+					<div class="col-md-3 port-left">
+						<a href="images/port-5.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-5.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 port-left">
+						<a href="images/port-6.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-6.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 port-left">
+						<a href="images/port-7.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-7.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 port-left">
+						<a href="images/port-8.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-8.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="portfolio-one">
+					<div class="col-md-3 port-left">
+						<a href="images/port-9.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-9.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 port-left">
+						<a href="images/port-10.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-10.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 port-left">
+						<a href="images/port-11.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-11.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 port-left">
+						<a href="images/port-12.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/port-12.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--portfolio-->
+	<!--swipebox -->	
+			<link rel="stylesheet" href="stylesheets/swipebox.css">
+				<script src="javascripts/jquery.swipebox.min.js"></script> 
+				<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+				</script>
+			<!--//swipebox Ends -->
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-right">
+				<p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/" target="_blank"> W3layouts</a></p>
+			</div>
+		</div>	
+	</div>
+	<!--footer-->
+	<!--smooth-scrolling-of-move-up-->
+		<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+					<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+</body>
+</html>	

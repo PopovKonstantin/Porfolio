@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+<% include layout %>
+</head>
+<body>
+	<!--header-->
+	<div class="header">
+		<div class="social-icons">
+				<ul class="nav1">
+					<li><a href="/">HOME</a></li>
+					<li id = "nd"><a href="/about" class="active">ABOUT</a></li>
+					<li id = "nd"><a href="/portfolio">PORTFOLIO</a></li>
+					<li id = "nd"><a href="/samplepage">SAMPLE PAGE</a></li>
+					<li id = "nd"><a href="/contact" >CONTACT</a></li>
+					<li><a href="/authuser" >REGISTRATION</a></li>
+					<li id = "nd"><a href="/chat" >CHAT</a></li>
+				</ul>
+			</div>
+		<div class="container">
+			<div class="col-md-9 top-nav">
+				<span class="menu"><img src="images/menu.png" alt=""/ ></span>
+				<ul class="nav1">
+					<li><a href="/">HOME</a></li>
+					<li class = "nd"><a href="/about" class="active">ABOUT</a></li>
+					<li class = "nd"><a href="/portfolio">PORTFOLIO</a></li>
+					<li class = "nd"><a href="/samplepage">SAMPLE PAGE</a></li>
+					<li class = "nd"><a href="/contact" >CONTACT</a></li>
+					<li><a href="/authuser" >REGISTRATION</a></li>
+					<li class = "nd"><a href="/chat" >CHAT</a></li>
+				</ul>
+				<!-- script-for-menu -->
+				 <script>
+				   $( "span.menu" ).click(function() {
+					 $( "ul.nav1" ).slideToggle( 300, function() {
+					 // Animation complete.
+					  });
+					  if ("<%= my_surname_user %><%= my_name_user %>" == "") {
+						var elems = document.getElementsByClassName('nd');
+						for (var i=0;i<elems.length;i+=1){
+						elems[i].style.display = 'none';
+					  }} 
+					  else {
+						var elems = document.getElementsByClassName('nd');
+						for (var i=0;i<elems.length;i+=1){
+						elems[i].style.display = 'display';
+					  }}
+					 });
+				</script>
+				<!-- /script-for-menu -->
+			</div>
+			<div class="col-md-3 header-logo">
+				<a href="/"><img src="images/identity03.jpg" style="width:80%; height:80%;" alt="logo"/></a>
+			</div>	
+			<div class="clearfix"> </div>
+		</div>	
+	</div>
+	<!--//header-->
+	<!--services-->
+	<div class="services">
+		<div class="container">
+			<h3>НАШИ УСЛУГИ</h3>
+			<div class="services-grids">
+				<div class="col-md-4 services-grids-info">
+					<span class="service-one"> </span>
+					<h4>ВЕБ РАЗРАБОТКА</h4>
+					<p> Я занимаюсь Веб разработкой на протяжении двух лет. 
+					За этот короткий промежуток времени успел выполнить немало проектов</p>
+				</div>
+				<div class="col-md-4 services-grids-info">
+					<span class="service-two active"> </span>
+					<h4>ЭФФЕКТНЫЙ ДИЗАЙН</h4>
+					<p>Команда специалистов собирает эффектные фотографии по всему миру!</p>
+				</div>
+				<div class="col-md-4 services-grids-info">
+					<span class="service-three"> </span>
+					<h4>РАЗРАБОТКА ПРОГРАММ С ИСПОЛЬЗОВАНИЕМ ЯЗЫКА C#</h4>
+					<div class="clearfix"> </div>
+					<p>Объектно-ориентированное прграммирование - основная специализация нашей организации. 
+					На нашем счету не один успешный проект</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--//services-->
+	<!--blog-->
+	<div class="blog">
+		<div class="container">
+			<div class="blog-top">
+				<h3>БЛОГ</h3>
+			</div>
+			<div class="blog-bottom">
+				<div class="blog-one">
+					<div class="col-md-6 blog-left">
+						<div class="col-md-5 blog-left-one">
+							<a href="/samplepage"><img src="images/blog-1.jpg" alt="" /></a>
+						</div>
+						<div class="col-md-7 blog-left-two">
+							<label>Monday, 30 March 2014 17:09</label>
+							<a href="/samplepage"><h4>Nullam non erat sed ante sollicitudin facilisis.</h4></a>
+							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed nunc in ex porttitor </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-6 blog-left">
+						<div class="col-md-5 blog-left-one">
+							<a href="/samplepage"><img src="images/blog-2.PNG" alt="" /></a>
+						</div>
+						<div class="col-md-7 blog-left-two">
+							<label>Monday, 30 March 2014 17:09</label>
+							<a href="/samplepage"><h4>Nullam non erat sed ante sollicitudin facilisis.</h4></a>
+							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed nunc in ex porttitor </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="blog-one">
+					<div class="col-md-6 blog-left">
+						<div class="col-md-5 blog-left-one">
+							<a href="/samplepage"><img src="images/blog-3.jpg" alt="" /></a>
+						</div>
+						<div class="col-md-7 blog-left-two">
+							<label>Monday, 30 March 2014 17:09</label>
+							<a href="/samplepage"><h4>Nullam non erat sed ante sollicitudin facilisis.</h4></a>
+							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed nunc in ex porttitor </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-6 blog-left">
+						<div class="col-md-5 blog-left-one">
+							<a href="/samplepage"><img src="images/blog-4.jpg" alt="" /></a>
+						</div>
+						<div class="col-md-7 blog-left-two">
+							<label>Monday, 30 March 2014 17:09</label>
+							<a href="/samplepage"><h4>Nullam non erat sed ante sollicitudin facilisis.</h4></a>
+							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed nunc in ex porttitor </p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--blog-->
+	<!--seemore-->
+	<div class="seemore">
+		<div class="seemore-text">
+			<h3>Наши проекты</h3>
+			<p> Взгляните на наши последние разработки и оцените их по достоинству</p>
+			<a href="/samplepage">Узнать больше</a>
+		</div>
+	</div>
+	<!--seemore-->
+	<!--testimonials-->
+	<div class="testimonials services">
+		<div class="container">
+			<h3>ОТЗЫВЫ</h3>
+			<div class="sap_tabs">	
+				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+					<ul class="resp-tabs-list">
+						<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span><img src="images/img4.jpg" alt=""/></span></li>
+						<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span><img src="images/img5.jpg" alt=""/></span></li>
+						<li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span><img src="images/img6.jpg" alt=""/></span></li>
+						<div class="clear"></div>
+					</ul>	
+					<div class="resp-tabs-container">
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">				
+							<div class="view view-first">
+								<h5>FILAN FISTEKU</h5>
+								<p>Donec libero dui, scelerisque ac augue id, tristique ullamcorper elit. Nam ultrices, lacus vitae adipiscing aliquet, metus ipsum imperdiet libero, vitae dignissim sapien diam ac nibh convallis.</p>
+							</div>
+						</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+							<div class="view view-first">
+								<h5>ULLAMCORPER FILAN </h5>
+								<p>Scelerisque ac augue id Donec libero dui, , tristique ullamcorper elit. Nam ultrices, lacus vitae adipiscing aliquet, metus ipsum imperdiet libero, vitae dignissim sapien diam ac nibh convallis.</p>
+							</div>
+						</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+							<div class="view view-first">
+								<h5>SCELERISQUE AUGUE</h5>
+								<p>Nam ultrices lacus vitae adipiscing aliquet, metus ipsum imperdiet libero, vitae dignissim sapientristique Donec libero dui, scelerisque ac augue id,  ullamcorper elit,diam ac nibh convallis.</p>
+							</div>
+						</div>
+					</div>	
+				</div>	
+			</div>		  
+		</div>
+	</div>	
+	<!--//testimonials-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-right">
+				<p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/" target="_blank"> W3layouts</a></p>
+			</div>
+		</div>	
+	</div>
+	<!--smooth-scrolling-of-move-up-->
+		<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+					<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->		
+</body>
+</html>
